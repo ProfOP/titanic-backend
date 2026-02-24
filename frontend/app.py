@@ -8,7 +8,7 @@ st.title("🚢 Titanic Dataset Chat Agent")
 st.write("Ask questions about Titanic passengers and get insights with visualizations.")
 
 # 🔹 IMPORTANT: Replace with your actual Render backend URL
-BACKEND_URL = "https://titanic-backend-kyt5.onrender.com"
+BACKEND_URL = "https://titanic-backend-kyt5.onrender.com/chat"
 
 user_input = st.text_input("Enter your question:")
 
