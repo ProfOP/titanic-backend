@@ -17,7 +17,7 @@ if st.button("Ask"):
         with st.spinner("Analyzing Titanic dataset..."):
             try:
                 response = requests.post(
-                    "http://127.0.0.1:8000/chat",
+                    ""https://titanic-backend.onrender.com/chat"",
                     json={"question": user_input}
                 )
 
