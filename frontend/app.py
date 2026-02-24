@@ -7,6 +7,9 @@ st.set_page_config(page_title="Titanic Chat Agent", page_icon="🚢")
 st.title("🚢 Titanic Dataset Chat Agent")
 st.write("Ask questions about Titanic passengers and get insights with visualizations.")
 
+# 🔹 IMPORTANT: Use your Render backend URL
+BACKEND_URL = "https://titanic-backend.onrender.com/chat"
+
 user_input = st.text_input("Enter your question:")
 
 if st.button("Ask"):
@@ -17,9 +20,8 @@ if st.button("Ask"):
         with st.spinner("Analyzing Titanic dataset..."):
             try:
                 response = requests.post(
-                    "https://titanic-backend.onrender.com/chat",
+                    BACKEND_URL,
                     json={"question": user_input}
-                )
                 )
 
                 data = response.json()
